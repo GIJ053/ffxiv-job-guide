@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Job;
+use App\Models\Role;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        'jobs' => Job::with('role')->get()
+    ]);
 });

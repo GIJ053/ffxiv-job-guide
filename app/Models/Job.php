@@ -9,7 +9,7 @@ class Job extends Model
 {
     use HasFactory;
 
-    public function roles() {
+    public function role() {
         return $this->belongsTo(Role::class);
     }
 }

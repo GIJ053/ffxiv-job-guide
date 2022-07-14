@@ -10,6 +10,6 @@ class Role extends Model
     use HasFactory;
 
     public function jobs() {
-        return $this->hasMany(Jobs::class);
+        return $this->hasMany(Job::class);
     }
 }
