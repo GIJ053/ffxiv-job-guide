@@ -26,7 +26,9 @@
                     @endforeach
                 </div>
 
-                <a href="/{!! $role->slug !!}" class="role-link">LINK TO ROLE PAGE HERE</a>
+                <div class="bottom-role-link">
+                    <a href="/role/{!! $role->slug !!}" class="role-link">More info on {{ $role->slug }} jobs here!</a>
+                </div>
             </div>
         @endfor
     </div>

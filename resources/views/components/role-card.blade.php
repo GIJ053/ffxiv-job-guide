@@ -1,7 +1,9 @@
 <div class="role-banner">
-    <h1> {{ $role->name }}</h1>
-    <img src={{ asset('images/role-images/' .$role->name. 'Role.png')}}>
-    <h3>{{ $role->description }}</h3>
+    <h1 class="banner-role-name"> {{ $role->name }}</h1>
+    <div  class="role-img-container">
+        <img src={{ asset('images/role-icons/bordered_' .$role->name. '.png')}}>
+    </div>
+    <h3 class="role-description">{{ $role->description }}</h3>
 </div>
 
 <div class="job-quick-links">

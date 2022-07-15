@@ -24,10 +24,7 @@ body {
     margin: 0;
     height: 100%;
     font-family: ffFont;
-}
-
-#site-banner {
-    width: 100%;
+    background-image: url('/images/background-images/bg.jpg');
 }
 
 #site-menu {
@@ -49,12 +46,20 @@ body {
     width: 20%;
 }
 
+.btn:not(:last-child) {
+    border-right: 0.1em solid #050505;
+}
+
 .btn:hover {
   border:none;
   background:rgba(0, 0, 0, 0.4);
-  background:#fff;
+  background: rgb(170, 129, 26);
   padding: 20px 0px;
   color: #1b1b1b;
+}
+
+.btn:not(:last-child):hover {
+    border-right: 0.1em solid #050505;
 }
 
 #roles-container {
@@ -76,20 +81,46 @@ body {
     padding: 1.5vw 0 3vw;
 }
 
+.role-container.tank-container {
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+}
+
 .role-container:not(:first-child) {
     margin-top: 1.5%;
 }
 
 .role-banner { 
     grid-area: 1 / 1 / 2 / 2; 
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.banner-role-name{
+    grid-area: 1 / 1 / 2 / 2;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.role-img-container {
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    place-items: start center;
+}
+
+.role-description {
+    grid-area: 1 / 2 / 3 / 3;
+    display: flex;
     align-items: center;
 }
+
 .job-quick-links { 
     grid-area: 1 / 2 / 2 / 3;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .jobs-container { grid-area: 2 / 1 / 3 / 3; }
 .role-link { grid-area: 3 / 1 / 4 / 3; }
@@ -113,16 +144,6 @@ body {
     text-align: center;
     width: 100%;
 }
-
-/* .jobs-container {
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: minmax(200px, auto);
-    gap: 25px;
-    width: 100%;
-    padding: 0 2.5%;
-} */
 
 .jobs-container {
     box-sizing: border-box;
@@ -188,6 +209,7 @@ body {
     position: absolute;
     z-index: 1;
     text-align: center;
+    font-size: 1.1em;
 }
 
 .transparent-job-icon {
@@ -210,6 +232,16 @@ img {
 
 .icon-container {
     grid-area: 1 / 3 / 2 / 4;
-    display:grid;
+    display: grid;
     place-items: center;
+}
+
+.bottom-role-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-icon-container {
+    
 }

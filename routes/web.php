@@ -21,14 +21,14 @@ Route::get('/', function () { //goes to the default webpage webpage and pass a c
     ]);
 });
 
-Route::get('job/{post:slug}', function (Job $job) {
+Route::get('jobs/{job:slug}', function (Job $job) {
     return view('job', [
         'job' => $job
     ]);
 });
 
 Route::get('role/{role:slug}', function (Role $role){
-    return view('jobs', [
-        'jobs' => $role->jobs
+    return view('role', [
+        'role' => $role
     ]);
 });
