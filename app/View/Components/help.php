@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class role-card extends Component
+class help extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class role-card extends Component
      */
     public function render()
     {
-        return view('components.role-card');
+        return view('components.help');
     }
 }

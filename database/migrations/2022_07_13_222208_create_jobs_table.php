@@ -17,6 +17,7 @@ class CreateJobsTable extends Migration
             $table->id();
             $table->foreignID('role_id');
             $table->string('name');
+            $table->string('arrbeviation');
             $table->string('slug')->unique();
             $table->string('description');
             $table->timestamps();
