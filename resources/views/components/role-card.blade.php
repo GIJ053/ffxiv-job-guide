@@ -1,7 +1,7 @@
 <div class="role-banner">
     <h1 class="banner-role-name"> {{ $role->name }}</h1>
     <div  class="role-img-container">
-        <img src={{ asset('images/role-icons/bordered_' .$role->name. '.png')}}>
+        <img src={{ asset('images/role-icons/bordered_' .$role->slug. '.png')}}>
     </div>
     <h3 class="role-description">{{ $role->description }}</h3>
 </div>
