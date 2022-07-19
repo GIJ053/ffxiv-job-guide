@@ -15,15 +15,11 @@ class CreateSkillsTable extends Migration
     {
         Schema::create('skills', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('job_id');
+            $table->foreignId('job_id')->nullable();
             $table->foreignId('role_id');
             $table->string('slug');
             $table->string('skill_name');
-            $table->string('description');
             $table->string('skill_type');
-            $table->integer('cooldown');
-            $table->boolean('is_weaponskill');
-            $table->boolean('is_ability');
             $table->timestamps();
         });
     }

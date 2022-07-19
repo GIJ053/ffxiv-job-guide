@@ -16,4 +16,8 @@ class Skill extends Model
     public function roles() {
         return $this->belongsTo(Role::class);
     }
+
+    public function skill_descriptions() {
+        return $this->hasOne(Skill_Description::class);
+    }
 }
